@@ -1,0 +1,240 @@
+/*El color de la pagina*/
+body{
+  background: rgba(31, 178, 246, 0.677);
+  padding: 50px;
+}
+/*Dentro de body una cja color blanca*/
+
+#dentro{
+  background:azure;
+  padding: 30px;
+
+}
+/*Alinear todos los titulos de la pagina*/
+
+.titulo{text-align: center}
+
+/*vinvula una animacion a los textos h1*/
+
+h1{position: relative;
+   animation-name: myAnimation;
+animation-duration: 4s;}
+/*pone todas imagnes en un tamaño expecifico*/
+img{
+    width: 100%;
+    height: 400px;
+    position: relative;
+    animation-name: myAnimation;
+  animation-duration: 4s;
+}
+
+/*Primera animacion de cambios de colores*/
+@keyframes myAnimation {
+  0%   {background-color:rgb(70, 237, 255); left:0px; top:0px;}
+  25%  {background-color:rgb(199, 67, 222); left:200px; top:0px;}
+  50%  {background-color:rgb(16, 60, 59); left:200px; top:200px;}
+  75%  {background-color:rgb(255, 29, 187); left:0px; top:200px;}
+  100% {background-color:rgb(206, 182, 87); left:0px; top:0px;}
+}
+/*Ordena la navegacion de frente*/
+.yo{
+    display: flex;
+    justify-content:space-around;
+    background-color: aqua;
+    padding: 20px;
+}
+/*Segunda animacion de la traformacion de la letra h1 y a */
+h1:hover{transform: scaleX(1.7);
+position: relative;
+  animation-name: myAnimation;
+  animation-duration: 4s;
+}
+  
+a:hover{transform: scale(1.3);}
+
+/*las tablas*/
+table{
+    width:100%;
+    border-collapse:collapse;
+    table-layout:fixed; background:white;
+    box-shadow:0 20px 25px rgba(0, 221, 255, 0.667);
+}
+
+th, td{
+    border:3px double #999;
+    padding:10px;
+    text-align:center;
+    vertical-align:middle;
+    word-wrap: break-word;  
+}
+
+th{
+    background:#74cefe;
+}
+
+td{
+    border:5px solid #ccc;
+}
+
+tbody tr:hover{
+    background:#f8ff9a;
+}
+
+
+body {
+ background-color: gray;  
+}
+
+/*cambio de color blanco cuando esta en un tamaño especifico*/
+@media(max-width: 400px) {
+  body {
+    background-color: white;
+      font-size: 20px;
+  
+
+  }
+}
+/*cambio de color azul cuando esta en un tamaño especifico*/
+@media (min-width: 700px) {
+  body {
+      background: rgba(31, 178, 246, 0.677);
+   
+  }
+}
+/*cambio de color con una animacion cuando esta en un tamaño especifico*/
+@media (min-width: 500px) {
+  body {
+animation-name: myAnimation;
+  animation-duration: 4s
+  }
+}
+/*Tercera animacion giro de imagenes*/
+@keyframes flipAnimation {
+  0% { transform: perspective(400px) rotateY(0); }
+  100% { transform: perspective(400px) rotateY(360deg); }
+}
+/*Vinculacion de la animacion*/
+.element {
+  animation-name: flipAnimation;
+  animation-duration: 1.8s;
+  animation-timing-function: ease-in;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: both;
+}
+/*Activa la animacion cuando este en un tamaño especifico*/
+@media (min-width: 500px) {
+  img{
+    animation-name: flipAnimation;
+   animation-duration: 4s;
+  }
+ }
+
+ .indicador{
+    position: fixed;
+    bottom: 14px;
+    right: 14px;
+    background: var(--bg-panel);
+    background-color: #f8ff9a;
+    border: 1px solid var(--neon-magenta);
+    color: var(--neon-magenta);
+    font-family: "Courier New", monospace;
+    font-size: 0.75rem;
+    padding: 8px 12px;
+    border-radius: 20px;
+    z-index: 10;
+  font-size: 20px;
+}
+.indicador .txt-tablet,
+.indicador .txt-desktop{ display: none; }
+
+footer{
+  text-align: center;
+  padding: 20px 0 60px;
+  color: var(--texto-tenue);
+  font-size: 0.8rem;
+}
+
+/* Tamaño de la Celular*/
+@media (min-width: 600px){
+    .indicador .txt-mobile{ display: none; }
+    .indicador .txt-tablet{ display: inline; }
+
+  }
+
+/* Tamaño de la Tablet*/
+
+@media (min-width: 900px){
+  .indicador .txt-tablet{ display: none; }
+  .indicador .txt-desktop{ display: inline; }
+}
+
+/* Tamaño de la laptop*/
+
+@media (min-width: 1024px){
+  .indicador .txt-tablet{ display: none; }
+  .indicador .txt-desktop{ display: inline; }
+}
+
+/* Estilos del Semaforo  */
+
+.contenedor-semaforo{
+    width:100%;
+    overflow-x:auto;
+    margin:20px 0;
+}
+/*tamaño del fondo de la carretera y semaforo*/
+
+#fondo{
+    position: relative;
+    width:1600px;
+}
+
+#fondo img{
+    width:1600px;
+    height:500px;
+    max-width:none;
+    position:relative;
+    animation-name:none;
+    display:block;
+}
+
+.semaforo{
+    position:absolute;
+    top:120px;
+    left:700px;
+    border: 20px;
+    width:90px;
+    padding:10px;
+    border-radius:10px;
+}
+
+.luz{
+    width:70px;
+    height:70px;
+    border: 20px;
+    border-radius:50%;
+    background:rgb(244,236,236);
+    margin:10px auto;
+    -webkit-border-radius:50%;
+    -moz-border-radius:50%;
+    -ms-border-radius:50%;
+    -o-border-radius:50%;
+}
+
+#personaje{
+    position:absolute;
+    left:10px;
+    top:280px;
+}
+
+#personaje img{
+    width:200px;
+    height:200px;
+}
+
+#btnSemaforo{
+    position:absolute;
+    top:520px;
+    left:10px;
+}
